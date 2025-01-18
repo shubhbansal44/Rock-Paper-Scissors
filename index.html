@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>Rock-Paper-Scissor</title>
+</head>
+<body class="m-0 bg-slate-500 overflow-hidden flex flex-col h-screen items-center justify-center font-mono">
+    <p class="text-5xl text-white opacity-45">Rock Paper Scissor</p>
+    <p class="text-2xl text-white opacity-45 mt-11">------------------Enter Your Move------------------</p>
+    <div class="flex flex-row p-12 pt-1 pb-4">
+        <button class="js-rock m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35" 
+        onclick="prs_game('rock');">Rock</button>
+        <button class="js-paper m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35"
+        onclick="prs_game('paper');">Paper</button>
+        <button class="js-scissor m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35"
+        onclick="prs_game('scissor');">Scissor</button>
+    </div>
+    <div class="flex flex-col p-12 pt-0 text-xl space-y-4 tracking-wide w-1/2 text-center">
+        <p class="p-1 text-2xl text-white opacity-45 text-center">------------------Results------------------</p>
+        <p class="js-results p-1">TBD</p>
+        <p class="js-pmove p-1">Your move: NULL</p>
+        <p class="js-cmove p-1">Computer move: NULL</p>
+        <p class="js-score p-1">Wins: 0 Losses: 0 Ties: 0</p>
+    </div>
+    <button class="js-reset h-11 w-72 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35" onclick="reset();">Reset Score</button>
+    <script src="script.js" defer></script>
+</body>
+</html>
