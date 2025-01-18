@@ -9,23 +9,6 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 const res=document.querySelector('.js-results'),pm=document.querySelector('.js-pmove'),cm=document.querySelector('.js-cmove'),sc=document.querySelector('.js-score'),rock=document.querySelector('.js-rock'),paper=document.querySelector('.js-paper'),scissor=document.querySelector('.js-scissor'),rset=document.querySelector('.js-reset');
 
 function prs_game(pmove) {
-    if(pmove==='paper') {
-        paper.classList.add('pressed');
-        rock.classList.remove('pressed');
-        scissor.classList.remove('pressed');
-        rset.classList.remove('pressed');
-    } else if(pmove==='rock') {
-        rock.classList.add('pressed');
-        paper.classList.remove('pressed');
-        scissor.classList.remove('pressed');
-        rset.classList.remove('pressed');
-    } else {
-        scissor.classList.add('pressed');
-        rock.classList.remove('pressed');
-        paper.classList.remove('pressed');
-        rset.classList.remove('pressed');
-    }
-
     let cmove;
     let a = Math.random();
 
@@ -66,10 +49,6 @@ function prs_game(pmove) {
 
 function reset () {
     localStorage.removeItem('score');
-    rset.classList.add('pressed');
-    rock.classList.remove('pressed');
-    scissor.classList.remove('pressed');
-    paper.classList.remove('pressed');
     score = {
         'wins': 0,
         'losses': 0,

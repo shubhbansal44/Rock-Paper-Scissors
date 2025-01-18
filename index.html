@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="public/css/input.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>Rock-Paper-Scissor</title>
 </head>
-<body class="m-0 bg-slate-500 overflow-hidden flex flex-col h-screen items-center justify-center font-mono">
-    <p class="text-5xl text-white opacity-45">Rock Paper Scissor</p>
-    <p class="text-2xl text-white opacity-45 mt-11">------------------Enter Your Move------------------</p>
-    <div class="flex flex-row p-12 pt-1 pb-4">
-        <button class="js-rock m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35" 
-        onclick="prs_game('rock');">Rock</button>
-        <button class="js-paper m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35"
-        onclick="prs_game('paper');">Paper</button>
-        <button class="js-scissor m-10 h-11 w-44 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35"
-        onclick="prs_game('scissor');">Scissor</button>
+<body class="m-0 p-0 overflow-x-hidden bg-cyan-950 h-screen w-screen flex">
+    <div class="h-screen w-full flex flex-col items-center font-mono text-gray-400">
+        <span class="text-4xl mt-4 md:text-7xl md:mt-8 lg:text-[7rem] lg:mt-10">Rock Paper Scissor</span>
+        <span class="text-2xl md:text-5xl lg:text-6xl mt-6 md:mt-10 lg:mt-12">Enter Your Move</span>
+        <div class="flex flex-col lg:flex-row gap-6 md:gap-10 mt-8 md:mt-10 lg:mt-14 text-black text-2xl md:text-3xl lg:text-4xl">
+            <button class="js-rock h-11 w-44 md:h-16 md:w-72 border border-black bg-teal-600 bg-opacity-70 hover:bg-opacity-80 rounded-md md:rounded-lg hover:shadow-md" 
+            onclick="prs_game('rock');">Rock</button>
+            <button class="js-paper h-11 w-44 md:h-16 md:w-72 border border-black bg-teal-600 bg-opacity-70 hover:bg-opacity-80 rounded-md md:rounded-lg hover:shadow-md"
+            onclick="prs_game('paper');">Paper</button>
+            <button class="js-scissor h-11 w-44 md:h-16 md:w-72 border border-black bg-teal-600 bg-opacity-70 hover:bg-opacity-80 rounded-md md:rounded-lg hover:shadow-md"
+            onclick="prs_game('scissor');">Scissor</button>
+        </div>
+        <div class="flex flex-col text-xl tracking-wide text-center mt-6 md:mt-10 lg:mt-14 md:text-3xl lg:text-4xl gap-4 md:gap-8 lg:gap-12">
+            <span>Results</span>
+            <span class="js-results">TBD</span>
+            <span class="js-pmove">Your move: NULL</span>
+            <span class="js-cmove">Computer move: NULL</span>
+            <span class="js-score">Wins: 0 Losses: 0 Ties: 0</span>
+        </div>
+        <button class="js-reset w-28 h-7 border-black border mt-4 md:mt-8 lg:mt-12 rounded-md md:rounded-lg md:text-2xl md:h-11 md:w-44 text-black bg-red-500 bg-opacity-70 hover:bg-opacity-80 hover:shadow-md" onclick="reset();">Reset Score</button>
     </div>
-    <div class="flex flex-col p-12 pt-0 text-xl space-y-4 tracking-wide w-1/2 text-center">
-        <p class="p-1 text-2xl text-white opacity-45 text-center">------------------Results------------------</p>
-        <p class="js-results p-1">TBD</p>
-        <p class="js-pmove p-1">Your move: NULL</p>
-        <p class="js-cmove p-1">Computer move: NULL</p>
-        <p class="js-score p-1">Wins: 0 Losses: 0 Ties: 0</p>
-    </div>
-    <button class="js-reset h-11 w-72 text-xl border border-black bg-teal-400 rounded-full hover:shadow-lg bg-opacity-35" onclick="reset();">Reset Score</button>
     <script src="script.js" defer></script>
 </body>
 </html>
